@@ -25,18 +25,22 @@ body, html, .container-fluid, #canvas {
     border: 5px dotted darkkhaki;
 }
 
-.col-sm-2 {
-    border: 5px dotted darkcyan;
-}
-
-.col-12 {
-    height: 50%;
-    border: 5px dotted darkgoldenrod;
-}
-
-.col {
-    border: 5px dotted darkgreen;
-}
 #activRes {
     height: 100%;
+}
+
+#keyPartners, #keyActivities, #keyResources, #valueProposition, #channels, #customerRel, #customerSeg, #costStructure, #revenueStream {
+    background-image: url("https://i.imgur.com/GPo9ja3.jpg");
+    background-size: cover;
+}
+
+#inputForm {
+    background-image: url("https://i.imgur.com/nO5jWvI.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+form {
+    margin-top: 60%;
 }

@@ -114,7 +114,7 @@ const BusinessCanvas = (props) => {
           </div>
       </div>
 
-      <div className="col col-md-3">
+      <div id="inputForm" className="col col-md-3">
       <InputForm
       func = {props.fill}
       form = {props} />
