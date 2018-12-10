@@ -122,32 +122,87 @@ const BusinessCanvas = (props) => {
     </div>  
     <div id="verticalBottom" className="row row-md-12 mt-4 fixed-bottom justify-content-center"> 
             
-            <div className="col col-auto">
-              <p>Key partners</p>
+            <div className="col col-auto text-center mr-4">
+              
+              <label>
+                
+                <input type="checkbox" name="" />
+                <span className="check"></span>
+                <p>Step 1</p>
+              </label>
             </div>
-            <div className="col col-auto">
-              <p>Key activities</p>
+            <div className="col col-auto text-center mr-4">
+              
+              <label>
+                
+                <input type="checkbox" name="" />
+                <span className="check"></span>
+                <p>Step 2</p>
+              </label>
             </div> 
-            <div className="col col-auto">
-              <p>Key resources</p>
+            <div className="col col-auto text-center mr-4">
+              
+              <label>
+                
+                <input type="checkbox" name="" />
+                <span className="check"></span>
+                <p>Step 3</p>
+              </label>
             </div> 
-            <div className="col col-auto">
-              <p>Value proposition</p>
+            <div className="col col-auto text-center mr-4">
+              
+              <label>
+                
+                <input type="checkbox" name="" />
+                <span className="check"></span>
+                <p>Step 4</p>
+              </label>
             </div>
-            <div className="col col-auto">
-              <p>Channels</p>
+            <div className="col col-auto text-center mr-4">
+              
+              <label>
+                
+                <input type="checkbox" name="" />
+                <span className="check"></span>
+                <p>Step 5</p>
+                
+              </label>
             </div> 
-            <div className="col col-auto">
-              <p>Customer relationships</p>
+            <div className="col col-auto text-center mr-4">
+              
+              <label>
+                
+                <input type="checkbox" name="" />
+                <span className="check"></span>
+                <p>Step 6</p>
+              </label>
             </div>   
-            <div className="col col-auto">
-              <p>Customer segments</p>
+            <div className="col col-auto text-center mr-4">
+              
+              <label>
+                
+                <input type="checkbox" name="" />
+                <span className="check"></span>
+                <p>Step 7</p>
+              </label>
             </div>
-            <div className="col col-auto">
-              <p>Cost structure</p>
+            <div className="col col-auto text-center mr-4">
+              
+              <label>             
+                <input type="checkbox" name="" />
+                
+                <span className="check"></span>
+                <p>Step 8</p>
+              </label>
             </div> 
-            <div className="col col-auto">
-              <p>Revenue stream</p>
+            <div className="col col-auto text-center mr-4">
+              
+              <label className="col align-items-center">             
+                <input type="checkbox" name="" />
+                
+                <span className="check"></span>
+                Step 9
+              </label>
             </div>       
 
           </div> 
