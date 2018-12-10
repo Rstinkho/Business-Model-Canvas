@@ -11,6 +11,7 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Dokdo|Kalam|Permanent+Marker" rel="stylesheet">
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -33,21 +34,21 @@
     <script>
 
     $(document).ready(function() {
-	  var max_fields = 10; 
-	  var wrapper = $(".input_fields_wrap"); 
-    var add_button = $(".add_field_button"); 
-    
-    var x = 1; 
-    
-	  $(add_button).click(function(e){ 
+	  var max_fields = 10;
+	  var wrapper = $(".input_fields_wrap");
+    var add_button = $(".add_field_button");
+
+    var x = 1;
+
+	  $(add_button).click(function(e){
 		e.preventDefault();
-		if(x < max_fields){ 
-			x++; 
-      $(wrapper).append('<div><input type="text" name="mytext"/> <a href="#" class="remove_field">Remove</a></div>'); 
+		if(x < max_fields){
+			x++;
+      $(wrapper).append('<div><input type="text" name="mytext"/> <a href="#" class="remove_field">X</a></div>');
 		}
   	});
-	
-  	$(wrapper).on("click",".remove_field", function(e){ 
+
+  	$(wrapper).on("click",".remove_field", function(e){
 		e.preventDefault(); $(this).parent('div').remove(); x--;
 	  })
     });

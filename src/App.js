@@ -4,7 +4,7 @@ import update from 'react-addons-update';
 import './App.css';
 
 class App extends Component {
-  state = { 
+  state = {
     canvas: {
       keyPartners: ["*", "*", "*"],
       keyActivities: ["*", "*", "*"],
@@ -17,7 +17,7 @@ class App extends Component {
       revenueStream: ["*", "*", "*"]
     },
     form: {
-      title: "FORM",
+      title: "Click on canvas el",
       currentId: ""
     }
   }
@@ -34,47 +34,47 @@ class App extends Component {
       if (this.state.form.currentId === "keyPartners") {
         this.setState( { canvas: update(this.state.canvas, {keyPartners: {$set: array }})
         })
-      }; 
+      };
 
       if (this.state.form.currentId === "keyActivities") {
         this.setState( { canvas: update(this.state.canvas, {keyActivities: {$set: array }})
         })
-      }; 
+      };
 
       if (this.state.form.currentId === "keyResources") {
         this.setState( { canvas: update(this.state.canvas, {keyResources: {$set: array }})
         })
-      }; 
+      };
 
       if (this.state.form.currentId === "valueProposition") {
         this.setState( { canvas: update(this.state.canvas, {valueProposition: {$set: array }})
         })
       };
-      
+
       if (this.state.form.currentId === "channels") {
         this.setState( { canvas: update(this.state.canvas, {channels: {$set: array }})
         })
-      }; 
-     
+      };
+
       if (this.state.form.currentId === "customerRel") {
         this.setState( { canvas: update(this.state.canvas, {customerRel: {$set: array }})
         })
-      }; 
+      };
 
       if (this.state.form.currentId === "customerSeg") {
         this.setState( { canvas: update(this.state.canvas, {customerSeg: {$set: array }})
         })
-      }; 
+      };
 
       if (this.state.form.currentId === "costStructure") {
         this.setState( { canvas: update(this.state.canvas, {costStructure: {$set: array }})
         })
-      }; 
+      };
 
       if (this.state.form.currentId === "revenueStream") {
         this.setState( { canvas: update(this.state.canvas, {revenueStream: {$set: array }})
         })
-      }; 
+      };
 
   console.log(array)
   console.log(this.state.form.currentId)
@@ -86,16 +86,16 @@ class App extends Component {
        currentId: event.target.id
       }
     })
-    
-    
+
+
   }
-  
+
 
   render() {
     return (
       <div>
       <BusinessCanvas
-      info = {this.state} 
+      info = {this.state}
       click = {this.setForm}
       fill = {this.fillForm}
       />
