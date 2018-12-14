@@ -6,10 +6,10 @@ import './App.css';
 class App extends Component {
   state = {
     canvas: {
-      keyPartners: ["*", "*", "*"],
-      keyActivities: ["*", "*", "*"],
-      keyResources: ["*", "*", "*"],
-      valueProposition: ["*", "*", "*"],
+      keyPartners: [" ", " "],
+      keyActivities: [" "],
+      keyResources: [" "],
+      valueProposition: [" ", " ", " ", " "],
       channels: ["*", "*", "*"],
       customerRel: ["*", "*", "*"],
       customerSeg: ["*", "*", "*"],
@@ -17,7 +17,7 @@ class App extends Component {
       revenueStream: ["*", "*", "*"]
     },
     form: {
-      title: "Click on canvas el",
+      title: "Click on the canvas title to edit",
       currentId: ""
     }
   }
@@ -27,7 +27,7 @@ class App extends Component {
     var array = [];
 
     var i;
-    for (i = 2; i < event.target.length; i++) {
+    for (i = 1; i < event.target.length; i++) {
       array.push(event.target[i - 1].value)
     }
 
@@ -81,13 +81,9 @@ class App extends Component {
   }
 
   setForm = (event) => {
-    this.setState( { form: {
-       title: event.target.id,
-       currentId: event.target.id
-      }
+    this.setState( { form: update(this.state.form, { currentId: {$set: event.target.id}})      
     })
-
-
+    document.chatform.reset();
   }
 
 

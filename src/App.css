@@ -65,25 +65,6 @@ form {
     display: block;
 }
 
-#keyPartners, #keyActivities, #keyResources, #valueProposition, #channels, #customerRel, #customerSeg, #costStructure, #revenueStream {
-    border: 2px solid black;
-    background-size: cover;
-    font-family: 'Kalam', cursive;
-    color: black;
-    font-size: 13px;
-}
-
-#keyPartners:hover, #keyActivities:hover, #keyResources:hover, #valueProposition:hover, #channels:hover, #customerRel:hover, #customerSeg:hover, #costStructure:hover, #revenueStream:hover {
-	cursor: context-menu;
-	background: lightgrey;
-	box-shadow: 0 0 10px tomato,
-	            0 0 15px darkred,
-	            0 0 20px red,
-	            0 0 25px red,
-	            0 0 30px red;
-
-}
-
 #inputForm {
 		background-color: black;
     background-image: url("https://i.imgur.com/gFl58Ei.jpg");
@@ -92,6 +73,10 @@ form {
     background-position: center;
 }
 
+#keyPartners:hover, #keyActivities:hover, #keyResources:hover, #valueProposition:hover, #channels:hover {
+    color: red;
+    cursor: pointer;
+}
 label {
     font-size: 14px;
     color: lightcyan;
