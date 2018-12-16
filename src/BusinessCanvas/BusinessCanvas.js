@@ -48,6 +48,7 @@ const BusinessCanvas = (props) => {
           <div id="verticalHeader" className="row row-md-12 mb-4">
             <div className="col-md-8">
               <h1>The Business Model Canvas</h1>
+              <p>Ololo lol olo</p>
             </div>
 
             <div className="col-md-4 mt-auto">
@@ -163,45 +164,45 @@ const BusinessCanvas = (props) => {
 
               <label>
 
-                <input type="checkbox" name="" />
+                <input id="keyPartners_chk" type="checkbox" name="" disabled />
                 <span className="check"></span>
-                <p>Step 1</p>
+                
               </label>
             </div>
             <div className="col col-auto text-center mr-4">
 
               <label>
 
-                <input type="checkbox" name="" />
+                <input id="keyActivities_chk" type="checkbox" name="" disabled />
                 <span className="check"></span>
-                <p>Step 2</p>
+                
               </label>
             </div>
             <div className="col col-auto text-center mr-4">
 
               <label>
 
-                <input type="checkbox" name="" />
+                <input id="keyResources_chk" type="checkbox" name="" disabled />
                 <span className="check"></span>
-                <p>Step 3</p>
+                
               </label>
             </div>
             <div className="col col-auto text-center mr-4">
 
               <label>
 
-                <input type="checkbox" name="" />
+                <input id="valueProposition_chk" type="checkbox" name="" disabled />
                 <span className="check"></span>
-                <p>Step 4</p>
+                
               </label>
             </div>
             <div className="col col-auto text-center mr-4">
 
               <label>
 
-                <input type="checkbox" name="" />
+                <input id="channels_chk" type="checkbox" name="" disabled />
                 <span className="check"></span>
-                <p>Step 5</p>
+                
 
               </label>
             </div>
@@ -209,36 +210,36 @@ const BusinessCanvas = (props) => {
 
               <label>
 
-                <input type="checkbox" name="" />
+                <input id="customerRel_chk" type="checkbox" name="" disabled />
                 <span className="check"></span>
-                <p>Step 6</p>
+                
               </label>
             </div>
             <div className="col col-auto text-center mr-4">
 
               <label>
 
-                <input type="checkbox" name="" />
+                <input id="customerSeg_chk" type="checkbox" name="" disabled />
                 <span className="check"></span>
-                <p>Step 7</p>
+                
               </label>
             </div>
             <div className="col col-auto text-center mr-4">
 
               <label>
-                <input type="checkbox" name="" />
+                <input id="costStructure_chk" type="checkbox" name="" disabled />
 
                 <span className="check"></span>
-                <p>Step 8</p>
+                
               </label>
             </div>
             <div className="col col-auto text-center mr-4">
 
               <label className="col align-items-center">
-                <input type="checkbox" name="" />
+                <input id="revenueStream_chk" type="checkbox" name="" disabled />
 
                 <span className="check"></span>
-                Step 9
+                
               </label>
             </div>
 
