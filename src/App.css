@@ -19,9 +19,9 @@ h2, h4 {
 }
 
 h3 {
-	font-size: 18px;
+	font-size: 24px;
 	font-family: 'Permanent Marker', cursive;
-	color: darkgray;
+    color: black;
 }
 
 h5 {
@@ -35,6 +35,12 @@ body, html, .container-fluid, #canvas {
   position: absolute;
   height: 100%;
   width: 100%;
+}
+
+#canvas_screen {
+    background-image: url("https://i.imgur.com/dNH2d6C.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #verticalHeader {
@@ -66,17 +72,63 @@ form {
 }
 
 #inputForm {
-		background-color: black;
+	background-color: black;
     background-image: url("https://i.imgur.com/gFl58Ei.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-#keyPartners:hover, #keyActivities:hover, #keyResources:hover, #valueProposition:hover, #channels:hover {
+#keyPartners:hover, #keyActivities:hover, #keyResources:hover, #valueProposition:hover, #channels:hover, #customerRel:hover, #revenueStream:hover, #customerSeg:hover, #costStructure:hover {
     color: red;
     cursor: pointer;
 }
+
+#KP:hover, #KA:hover, #KR:hover, #VP:hover, #CH:hover, #CR:hover, #CS:hover, #CoS:hover, #RS:hover {
+z-index:5;
+-webkit-transform: scale(1.15);
+-moz-transform: scale(1.15);
+-o-transform: scale(1.15);
+}
+
+#KP, #KA, #KR, #VP, #CH, #CR, #CS, #CoS, #RS {
+-moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+-webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+box-shadow:10px 10px 7px rgba(0,0,0,.7);
+position:relative;
+border: 1px solid black;
+text-decoration:none;
+color:#000;
+background:#ffc;
+display:block;
+}
+
+
+
+#KA, #CS, #KR {
+    -o-transform:rotate(2deg);
+    -webkit-transform:rotate(2deg);
+    -moz-transform:rotate(2deg);
+    position:relative;
+    
+}
+
+#CoS, #VP, #CR {
+    -o-transform:rotate(-3deg);
+    -webkit-transform:rotate(-3deg);
+    -moz-transform:rotate(-3deg);
+    position:relative;
+    
+}
+
+#RS, #KP, #CH {
+    -o-transform:rotate(-2deg);
+    -webkit-transform:rotate(-2deg);
+    -moz-transform:rotate(-2deg);
+    position:relative;
+    
+}
+
 label {
     font-size: 14px;
     color: lightcyan;
@@ -136,6 +188,10 @@ label input[type="checkbox"]:checked ~ .check:before {
                 0 0 20px rgba(0, 176, 255, 1),
                 0 0 25px rgba(0, 176, 255, 1),
                 0 0 30px rgba(0, 176, 255, 1);
+}
+
+fieldset .row .form-check label {
+    color: black;
 }
 
 

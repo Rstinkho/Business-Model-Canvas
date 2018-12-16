@@ -10,11 +10,11 @@ class App extends Component {
       keyActivities: [" "],
       keyResources: [" "],
       valueProposition: [" ", " ", " ", " "],
-      channels: ["*", "*", "*"],
+      channels: [" ", " "],
       customerRel: ["*", "*", "*"],
       customerSeg: ["*", "*", "*"],
       costStructure: ["*", "*", "*"],
-      revenueStream: ["*", "*", "*"]
+      revenueStream: [" ", " "]
     },
     form: {
       title: "Click on the canvas title to edit",
@@ -23,6 +23,7 @@ class App extends Component {
   }
 
   fillForm = (event) => {
+    console.log(event.target.value)
     event.preventDefault();
     var array = [];
 

@@ -39,11 +39,12 @@ const BusinessCanvas = (props) => {
     return <p>{revenue}</p>
   })
 
+
   return (
 
   <div className="container-fluid">
     <div id="canvas" className="row row-md-12">
-      <div className="col col-md-9">
+      <div id="canvas_screen" className="col col-md-9">
           <div id="verticalHeader" className="row row-md-12 mb-4"> 
             <div className="col-md-5">
               <h1>The Business Model Canvas</h1>
@@ -94,28 +95,47 @@ const BusinessCanvas = (props) => {
                 <div id="activRes" className="row mr-2 ml-2">
                   <div id="CH" className="col-12 mb-2" onClick={props.click}>
                     <h3> <span id="channels">Channels</span> </h3>
-                    {channels}
+                    <ul>
+                    <li>
+                      Distribution channels: {channels[0]}
+                    </li>
+                    <li>
+                      Marketing channels: {channels[1]}
+                    </li>
+                  </ul>
                   </div> 
-                  <div id ="customerRel" className="col-12" onClick={props.click}> 
-                    <h3>Customer Relationships</h3>
-                    {cusRels}
+                  <div id ="CR" className="col-12" onClick={props.click}> 
+                    <h3> <span id ="customerRel">Customer Relationships</span> </h3>
+                    <p><font color="blue">{cusRels[0]}</font></p>
+                    {cusRels[1]}
+                    {cusRels[2]}
+                    <p><font color="blue">{cusRels[3]}</font></p>
+                    {cusRels[4]}
+                    {cusRels[5]}
+                    <p><font color="blue">{cusRels[6]}</font></p>
+                    {cusRels[7]}
+                    {cusRels[8]}
+                    <p><font color="blue">{cusRels[9]}</font></p>
+                    {cusRels[10]}
+                    {cusRels[11]}
+                    {cusRels[12]}
                   </div> 
                 </div>
               </div>
 
-            <div id="customerSeg" className="col col-sm-2" onClick={props.click}>
-              <h3>Customer Segments </h3>
+            <div id="CS" className="col col-sm-2" onClick={props.click}>
+              <h3> <span id="customerSeg">Customer Segments</span> </h3>
               {cusSegs}
               </div>
           </div>
           
           <div id="verticalSecond" className="row row-md-12 ml-5 mr-5">
-            <div id="costStructure" className="col col mr-2" onClick={props.click}>
-              <h3>Cost structure</h3>
+            <div id="CoS" className="col col mr-2" onClick={props.click}>
+              <h3> <span id="costStructure">Cost structure</span> </h3>
               {costs}
             </div> 
-            <div id="revenueStream" className="col col" onClick={props.click}>
-              <h3>Revenue stream</h3>
+            <div id="RS" className="col col" onClick={props.click}>
+              <h3> <span id="revenueStream">Revenue stream</span> </h3>
               {revenues}
             </div>
           </div>
