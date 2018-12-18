@@ -1,4 +1,4 @@
-*{margin:0; padding:0; box-sizing:border-box;}
+*{margin:0; padding:0; box-sizing:border-box; }
 h1 {
 	color: white;
     font-family: 'Bungee Inline', cursive;
@@ -16,6 +16,11 @@ border: 0;
 
 h2, h4 {
 	font-family: 'Permanent Marker', cursive;
+}
+
+#pdfScreen {
+    height: 100%;
+    width: 100%;
 }
 
 h3 {

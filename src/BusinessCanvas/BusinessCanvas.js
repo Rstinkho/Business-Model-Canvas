@@ -1,5 +1,7 @@
 import React from 'react';
 import InputForm from '../InputForm/InputForm';
+import html2canvas from 'html2canvas';
+import {saveAs} from 'file-saver';
 
 const BusinessCanvas = (props) => {
 
@@ -39,6 +41,27 @@ const BusinessCanvas = (props) => {
     return <p>{revenue}</p>
   })
 
+  // html2canvas(target, {
+  //   useCORS: true
+  // })
+  //   .then(function (canvas) {
+  //     canvas.UniversalToBlob(function (blob) {
+  //       saveAs(blob, "aScreenshot.png");
+  //     }, "image/png", 1);
+  //   })
+  //   .catch(function (err) { console.log(err); });
+
+  function genPdf() {
+    html2canvas(document.getElementById("canvas_screen"), {
+      useCORS: true
+    })
+      .then(function (canvas) {
+        canvas.toBlob(function (blob) {
+          saveAs(blob, "canvas.png");
+        }, "image/png", 1);
+        })
+        .catch(function (err) { console.log(err); });
+  };
 
   return (
 
@@ -60,7 +83,6 @@ const BusinessCanvas = (props) => {
             </div>
 
           </div>
-
           <div id="verticalFirst" className="row row-md-12 mr-5 ml-5 mb-3">
               <div id="KP" className="col-sm-2 col-md-2">
                   <h3> <span id="keyPartners" onClick={props.click}>Key Partners</span> </h3>
@@ -239,7 +261,7 @@ const BusinessCanvas = (props) => {
                 <input id="revenueStream_chk" type="checkbox" name="" disabled />
 
                 <span className="check"></span>
-                
+                <button onClick={genPdf}>download</button> 
               </label>
             </div>
 

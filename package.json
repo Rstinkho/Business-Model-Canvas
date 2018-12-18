@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "file-saver": "^2.0.0",
+    "html2canvas": "^1.0.0-alpha.12",
     "jquery": "^3.3.1",
+    "jquery-awesome-cursor": "^0.3.1",
+    "jspdf": "^1.4.1",
     "react": "^16.6.3",
     "react-addons-update": "^15.6.2",
     "react-dom": "^16.6.3",
