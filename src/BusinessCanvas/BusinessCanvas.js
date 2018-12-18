@@ -26,7 +26,7 @@ const BusinessCanvas = (props) => {
   })
 
   const cusRels = props.info.canvas.customerRel.map(cusRel => {
-    return <p>{cusRel}</p>
+    return <span>{cusRel}</span>
   })
 
   const cusSegs = props.info.canvas.customerSeg.map(cusSeg => {
@@ -71,7 +71,7 @@ const BusinessCanvas = (props) => {
           <div id="verticalHeader" className="row row-md-12 mb-4">
             <div className="col-md-8">
               <h1>The Business Model Canvas</h1>
-              <p>Ololo lol olo</p>
+              <p>Created by: Taras Turchinskiy</p>
             </div>
 
             <div className="col-md-4 mt-auto">
@@ -87,14 +87,10 @@ const BusinessCanvas = (props) => {
               <div id="KP" className="col-sm-2 col-md-2">
                   <h3> <span id="keyPartners" onClick={props.click}>Key Partners</span> </h3>
                   <hr/>
-                  <ul>
-                    <li>
-                      Operational partners: {partners[0]}
-                    </li>
-                    <li>
-                      Marketing partners: {partners[1]}
-                    </li>
-                  </ul>
+                      <h6><font color="darkblue">{partners[0]}</font></h6>
+                      {partners[1]}
+                      <h6><font color="darkgreen">{partners[2]}</font></h6>
+                      {partners[3]}
               </div>
 
               <div className="col-sm-3">
@@ -115,7 +111,10 @@ const BusinessCanvas = (props) => {
               <div id="VP" className="col-sm-2" onClick={props.click}>
                 <h3> <span id="valueProposition">Value Proposition</span> </h3>
                 <hr/>
-                {values}
+                <p> <font color="tomato">{values[0]}</font></p>
+                <p> <font color="navy">{values[1]}</font></p>
+                <p> <font color="darkgreen">{values[2]}</font></p>
+                <p> <font color="darkcyan>">{values[3]}</font></p>
               </div>
 
               <div className="col-sm-3">
@@ -123,34 +122,21 @@ const BusinessCanvas = (props) => {
                   <div id="CH" className="col-12 mb-2" onClick={props.click}>
                     <h3> <span id="channels">Channels</span> </h3>
                     <hr/>
-                    <ul>
-                    <li>
-                      Distribution channels: {channels[0]}
-                    </li>
-                    <li>
-                      Marketing channels: {channels[1]}
-                    </li>
-                  </ul>
+                    <p> <font color="darkcyan">{channels[1]}</font> </p>
+                    <p> <font color="navy">{channels[3]}</font> </p>
+
                   </div>
                   <div id ="CR" className="col-12" onClick={props.click}>
                     <h3> <span id ="customerRel">Customer Relationships</span> </h3>
                     <hr/>
-                    <p>(need to fix space between information)</p>
-                    <p><font color="blue">{cusRels[0]}</font></p>
-                    {cusRels[1]}
-                    {cusRels[2]}
-                    <p><font color="blue">{cusRels[3]}</font></p>
-                    {cusRels[4]}
-                    {cusRels[5]}
-                    <p><font color="blue">{cusRels[6]}</font></p>
-                    {cusRels[7]}
-                    {cusRels[8]}
-                    <p><font color="blue">{cusRels[9]}</font></p>
-                    {cusRels[10]}
-                    {cusRels[11]}
-                    {cusRels[12]}
-                  </div>
+                    <div className="box">
+                    <p><font color="darkcyan">{cusRels[0]} </font>{cusRels[1]}{cusRels[2]}</p>
+                    <p><font color="tomato">{cusRels[3]} </font>{cusRels[4]}{cusRels[5]}</p>
+                    <p><font color="navy">{cusRels[6]} </font>{cusRels[7]}{cusRels[8]}</p>
+                    <p><font color="darkblue">{cusRels[9]} </font>{cusRels[10]}{cusRels[11]}{cusRels[12]}</p>
+                    </div>
                 </div>
+              </div>
               </div>
 
             <div id="CS" className="col col-sm-2" onClick={props.click}>
@@ -188,7 +174,7 @@ const BusinessCanvas = (props) => {
 
                 <input id="keyPartners_chk" type="checkbox" name="" disabled />
                 <span className="check"></span>
-                
+
               </label>
             </div>
             <div className="col col-auto text-center mr-4">
@@ -197,7 +183,7 @@ const BusinessCanvas = (props) => {
 
                 <input id="keyActivities_chk" type="checkbox" name="" disabled />
                 <span className="check"></span>
-                
+
               </label>
             </div>
             <div className="col col-auto text-center mr-4">
@@ -206,7 +192,7 @@ const BusinessCanvas = (props) => {
 
                 <input id="keyResources_chk" type="checkbox" name="" disabled />
                 <span className="check"></span>
-                
+
               </label>
             </div>
             <div className="col col-auto text-center mr-4">
@@ -215,7 +201,7 @@ const BusinessCanvas = (props) => {
 
                 <input id="valueProposition_chk" type="checkbox" name="" disabled />
                 <span className="check"></span>
-                
+
               </label>
             </div>
             <div className="col col-auto text-center mr-4">
@@ -224,7 +210,7 @@ const BusinessCanvas = (props) => {
 
                 <input id="channels_chk" type="checkbox" name="" disabled />
                 <span className="check"></span>
-                
+
 
               </label>
             </div>
@@ -234,7 +220,7 @@ const BusinessCanvas = (props) => {
 
                 <input id="customerRel_chk" type="checkbox" name="" disabled />
                 <span className="check"></span>
-                
+
               </label>
             </div>
             <div className="col col-auto text-center mr-4">
@@ -243,7 +229,7 @@ const BusinessCanvas = (props) => {
 
                 <input id="customerSeg_chk" type="checkbox" name="" disabled />
                 <span className="check"></span>
-                
+
               </label>
             </div>
             <div className="col col-auto text-center mr-4">
@@ -252,7 +238,7 @@ const BusinessCanvas = (props) => {
                 <input id="costStructure_chk" type="checkbox" name="" disabled />
 
                 <span className="check"></span>
-                
+
               </label>
             </div>
             <div className="col col-auto text-center mr-4">
@@ -261,11 +247,19 @@ const BusinessCanvas = (props) => {
                 <input id="revenueStream_chk" type="checkbox" name="" disabled />
 
                 <span className="check"></span>
-                <button onClick={genPdf}>download</button> 
+
               </label>
             </div>
 
-          </div>
+            <div id="download" className="row" hidden >
+                <div className="col col-6 align-items-center">
+                </div>
+                <div className="col col-6">
+                <span className="download" onClick={genPdf}><h4>IMAGE/PNG</h4></span>
+                <span className="download" onClick={genPdf}><h4>TEXT/PDF</h4></span>
+                </div>
+            </div>
+        </div>
   </div>
   )
 }

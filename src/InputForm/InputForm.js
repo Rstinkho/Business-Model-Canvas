@@ -2,7 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 
 const form = (props) => {
-    
+
     $(document).ready(function() {
 
         // variables for DOM manipulation with input form
@@ -31,7 +31,25 @@ const form = (props) => {
         var staticThree_cs = $("#static_3cs");
         var staticFour_cs = $("#static_4cs");
 
-        
+        var x = $("#download");
+
+        if  (
+                ($('#keyPartners_chk').is(":checked")) &&
+                ($('#keyActivities_chk').is(":checked")) &&
+                ($('#keyResources_chk').is(":checked")) &&
+                ($('#valueProposition_chk').is(":checked")) &&
+                ($('#channels_chk').is(":checked")) &&
+                ($('#customerRel_chk').is(":checked")) &&
+                ($('#customerSeg_chk').is(":checked")) &&
+                ($('#costStructure_chk').is(":checked")) &&
+                ($('#revenueStream_chk').is(":checked"))
+            )
+                {
+                  $(x).removeAttr('hidden')
+                }
+
+
+
         // jQuery functions for removing unneccessary elements of canvas
 
         // 1. customer's relationships
@@ -103,12 +121,12 @@ const form = (props) => {
             <h4>#{props.form.info.form.currentId}</h4>
 
                 <div className="input-box">
-                    <p>Who are your key OPERATIONAL partners?</p>
+                    <input type="text" value="Operational partners:" disabled></input>
                     <input id="P1" type="text" name="mytext" placeholder="add operational partner" />
                 </div>
 
                  <div className="input-box">
-                    <p>Who are your key MARKETING partners?</p>
+                    <input type="text" value="Marketing partners:" disabled></input>
                     <input id="P2" type="text" name="mytext" placeholder="add marketing partner" />
                 </div>
 
@@ -165,11 +183,11 @@ const form = (props) => {
             <h2>FILL IN</h2>
             <h4>#{props.form.info.form.currentId}</h4>
                 <div className="input-box">
-                <p>What are your DISTRIBUTION channels?</p>
+                    <input type="text" value="Distribution channels:" disabled></input>
                     <input id="P1" type="text" name="mytext" placeholder="add resources" />
                 </div>
                 <div className="input-box">
-                <p>What are your MARKETING channels?</p>
+                    <input type="text" value="Marketing channels:" disabled></input>
                     <input id="P1" type="text" name="mytext" placeholder="add resources" />
                 </div>
 
@@ -184,22 +202,22 @@ const form = (props) => {
             <h4>#{props.form.info.form.currentId}</h4>
             <p>What kind of relationship do you have with your customers? Choose all that applies, delete unneccessary</p>
             <div className="input-box" id ="transaction">
-                    <input type="text" id="static_1" value="transactional:" disabled></input>
+                    <input type="text" id="static_1" value="TRANSACTIONAL:" disabled></input>
                     <input id="P1" type="text" name="mytext" placeholder="add description" /> <button className="removeField">X</button>
             </div>
 
             <div className="input-box" id="longterm">
-                    <input type="text" id="static_2" value="long-term:" disabled></input>
+                    <input type="text" id="static_2" value="LONG-TERM:" disabled></input>
                     <input id="P1" type="text" name="mytext" placeholder="add description" /> <button className="removeField_2">X</button>
             </div>
 
             <div className="input-box" id="community">
-                    <input type="text" id="static_3" value="community:" disabled></input>
+                    <input type="text" id="static_3" value="COMMUNITY:" disabled></input>
                     <input id="P1" type="text" name="mytext" placeholder="add description" /> <button className="removeField_3">X</button>
             </div>
 
             <div className="input-box" id="personal">
-                    <input type="text" id="static_4" value="personal:" disabled></input>
+                    <input type="text" id="static_4" value="PERSONAL:" disabled></input>
                     <input id="P1" type="text" name="mytext" placeholder="add description" /> <button className="removeField_4">X</button>
             </div>
 
@@ -234,23 +252,27 @@ const form = (props) => {
             <div className="input-box" id ="oneSided">
                     <input type="text" id="oneSided_1" value="one-sided" disabled></input>
                     <button className="removeField">X</button>
-
             </div>
             <div className="input-box" id="twoSided">
                     <input type="text" id="twoSided_1" value="two-sided" disabled></input>
                     <button className="removeField_2">X</button>
             </div>
+
             <div className="input-box">
             <p>Who is your primary target segment?</p>
             <input id="P1" type="text" name="mytext" placeholder="add source" />
+            </div>
 
+            <div className="input-box">
             <p>Who is your secondary target segment?</p>
             <input id="P1" type="text" name="mytext" placeholder="add source" />
+            </div>
 
+            <div className="input-box">
             <p>Which is your primary target market?</p>
             <input id="P1" type="text" name="mytext" placeholder="add source" />
-
             </div>
+
             <input type="submit" value="Submit" />
             </form>
         )
@@ -263,22 +285,22 @@ const form = (props) => {
 
             <div className="input-box" id ="hcapital">
                     <input type="text" id="static_1cs" value="Human capital:" disabled></input>
-                    <input id="P1" type="text" name="mytext" placeholder="$" /> <button className="removeFieldcs">X</button>                
+                    <input id="P1" type="text" name="mytext" placeholder="$" /> <button className="removeFieldcs">X</button>
             </div>
 
             <div className="input-box" id="inventory">
                     <input type="text" id="static_2cs" value="Inventory:" disabled></input>
-                    <input id="P1" type="text" name="mytext" placeholder="$" /> <button className="removeField_2cs">X</button>              
+                    <input id="P1" type="text" name="mytext" placeholder="$" /> <button className="removeField_2cs">X</button>
             </div>
 
             <div className="input-box" id="technology">
                     <input type="text" id="static_3cs" value="Technology:" disabled></input>
-                    <input id="P1" type="text" name="mytext" placeholder="$" /> <button className="removeField_3cs">X</button>                   
+                    <input id="P1" type="text" name="mytext" placeholder="$" /> <button className="removeField_3cs">X</button>
             </div>
 
             <div className="input-box" id="other">
                     <input type="text" id="static_4cs" value="Other:" disabled></input>
-                    <input id="P1" type="text" name="mytext" placeholder="add description" /> <button className="removeField_4cs">X</button>                 
+                    <input id="P1" type="text" name="mytext" placeholder="add description" /> <button className="removeField_4cs">X</button>
             </div>
             <div className="input-box">
             <p>What is your secondary business cost?</p>
@@ -291,7 +313,7 @@ const form = (props) => {
     }  else {
         return (
             <form name="chatform" onSubmit={props.func} >
-            <h4>{props.form.info.form.title}</h4>  
+            <h4>{props.form.info.form.title}</h4>
             </form>
         )
     }

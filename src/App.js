@@ -11,9 +11,9 @@ class App extends Component {
       keyResources: [" "],
       valueProposition: [" ", " ", " ", " "],
       channels: [" ", " "],
-      customerRel: ["*", "*", "*"],
-      customerSeg: ["*", "*", "*"],
-      costStructure: ["*", "*", "*"],
+      customerRel: [" ", " ", " "],
+      customerSeg: [" ", " ", " "],
+      costStructure: [" ", " ", " "],
       revenueStream: [" ", " "]
     },
     form: {
@@ -35,7 +35,7 @@ class App extends Component {
       if (this.state.form.currentId === "keyPartners") {
         this.setState( { canvas: update(this.state.canvas, {keyPartners: {$set: array }})
         })
-        this.setState( { form: update(this.state.form, {currentId: {$set: null }})     
+        this.setState( { form: update(this.state.form, {currentId: {$set: null }})
         });
         document.getElementById("keyPartners_chk").checked = "true";
       };
@@ -43,7 +43,7 @@ class App extends Component {
       if (this.state.form.currentId === "keyActivities") {
         this.setState( { canvas: update(this.state.canvas, {keyActivities: {$set: array }})
         })
-        this.setState( { form: update(this.state.form, {currentId: {$set: null }})     
+        this.setState( { form: update(this.state.form, {currentId: {$set: null }})
         });
         document.getElementById("keyActivities_chk").checked = "true";
       };
@@ -51,7 +51,7 @@ class App extends Component {
       if (this.state.form.currentId === "keyResources") {
         this.setState( { canvas: update(this.state.canvas, {keyResources: {$set: array }})
         })
-        this.setState( { form: update(this.state.form, {currentId: {$set: null }})     
+        this.setState( { form: update(this.state.form, {currentId: {$set: null }})
         });
         document.getElementById("keyResources_chk").checked = "true";
       };
@@ -59,15 +59,15 @@ class App extends Component {
       if (this.state.form.currentId === "valueProposition") {
         this.setState( { canvas: update(this.state.canvas, {valueProposition: {$set: array }})
         })
-        this.setState( { form: update(this.state.form, {currentId: {$set: null }})     
+        this.setState( { form: update(this.state.form, {currentId: {$set: null }})
         });
         document.getElementById("valueProposition_chk").checked = "true";
       };
 
       if (this.state.form.currentId === "channels") {
-        this.setState( { canvas: update(this.state.canvas, {channels: {$set: array }})     
+        this.setState( { canvas: update(this.state.canvas, {channels: {$set: array }})
         })
-        this.setState( { form: update(this.state.form, {currentId: {$set: null }})     
+        this.setState( { form: update(this.state.form, {currentId: {$set: null }})
         });
         document.getElementById("channels_chk").checked = "true";
       };
@@ -75,7 +75,7 @@ class App extends Component {
       if (this.state.form.currentId === "customerRel") {
         this.setState( { canvas: update(this.state.canvas, {customerRel: {$set: array }})
         });
-        this.setState( { form: update(this.state.form, {currentId: {$set: null }})     
+        this.setState( { form: update(this.state.form, {currentId: {$set: null }})
         });
         document.getElementById("customerRel_chk").checked = "true";
       };
@@ -83,7 +83,7 @@ class App extends Component {
       if (this.state.form.currentId === "customerSeg") {
         this.setState( { canvas: update(this.state.canvas, {customerSeg: {$set: array }})
         })
-        this.setState( { form: update(this.state.form, {currentId: {$set: null }})     
+        this.setState( { form: update(this.state.form, {currentId: {$set: null }})
         });
         document.getElementById("customerSeg_chk").checked = "true";
       };
@@ -91,7 +91,7 @@ class App extends Component {
       if (this.state.form.currentId === "costStructure") {
         this.setState( { canvas: update(this.state.canvas, {costStructure: {$set: array }})
         })
-        this.setState( { form: update(this.state.form, {currentId: {$set: null }})     
+        this.setState( { form: update(this.state.form, {currentId: {$set: null }})
         });
         document.getElementById("costStructure_chk").checked = "true";
       };
@@ -99,17 +99,16 @@ class App extends Component {
       if (this.state.form.currentId === "revenueStream") {
         this.setState( { canvas: update(this.state.canvas, {revenueStream: {$set: array }})
         })
-        this.setState( { form: update(this.state.form, {currentId: {$set: null }})     
+        this.setState( { form: update(this.state.form, {currentId: {$set: null }})
         });
         document.getElementById("revenueStream_chk").checked = "true";
       };
-
-  
-  console.log(this.state.form.currentId)
   }
 
+
+
   setForm = (event) => {
-    this.setState( { form: update(this.state.form, { currentId: {$set: event.target.id}})      
+    this.setState( { form: update(this.state.form, { currentId: {$set: event.target.id}})
     })
     document.chatform.reset();
   }
