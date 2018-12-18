@@ -269,7 +269,6 @@ const BusinessCanvas = (props) => {
   </div>
   )
 }
-
 export default BusinessCanvas;
 
 
