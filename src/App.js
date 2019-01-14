@@ -105,25 +105,21 @@ class App extends Component {
       };
   }
 
-
-
   setForm = (event) => {
     this.setState( { form: update(this.state.form, { currentId: {$set: event.target.id}})
     })
     document.chatform.reset();
   }
 
-
   render() {
     return (
       <div>
-      <BusinessCanvas
-      info = {this.state}
-      click = {this.setForm}
-      fill = {this.fillForm}
-      />
+        <BusinessCanvas
+        info = {this.state}
+        click = {this.setForm}
+        fill = {this.fillForm}
+        />
       </div>
-
     );
   }
 }

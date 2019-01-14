@@ -1,4 +1,5 @@
 *{margin:0; padding:0; box-sizing:border-box; }
+
 h1 {
 	color: white;
     font-family: 'Bungee Inline', cursive;
@@ -95,9 +96,9 @@ font-family: 'Permanent Marker';
 
 form .input-box {
     position: relative;
-    margin: 10px;
-    margin-bottom: 18px;
-    margin-top: 18px;
+    margin: 2px;
+    margin-bottom: 5px;
+    margin-top: 4px;
 }
 
 form .input-box input {
@@ -132,6 +133,7 @@ form input[type="text"]:disabled {
     background: black;
     font-size: 14px;
     color: white;
+    margin-top: 2px;
   }
 
 #inputForm {
