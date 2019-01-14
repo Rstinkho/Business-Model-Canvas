@@ -11,9 +11,9 @@ class App extends Component {
       keyResources: [" "],
       valueProposition: [" ", " ", " ", " "],
       channels: [" ", " "],
-      customerRel: [" ", " ", " "],
-      customerSeg: [" ", " ", " "],
-      costStructure: [" ", " ", " "],
+      customerRel: [" "],
+      customerSeg: [" ", " ", " ", " "],
+      costStructure: [" "],
       revenueStream: [" ", " "]
     },
     form: {
@@ -24,12 +24,16 @@ class App extends Component {
 
   fillForm = (event) => {
     console.log(event.target.value)
+
+
+
+
     event.preventDefault();
     var array = [];
 
     var i;
-    for (i = 1; i < event.target.length; i++) {
-      array.push(event.target[i - 1].value)
+    for (i = 0; i < event.target.length; i++) {
+      array.push(event.target[i].value)
     }
 
       if (this.state.form.currentId === "keyPartners") {
@@ -104,7 +108,6 @@ class App extends Component {
         document.getElementById("revenueStream_chk").checked = "true";
       };
   }
-
 
 
   setForm = (event) => {

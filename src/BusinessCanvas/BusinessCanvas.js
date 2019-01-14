@@ -34,12 +34,14 @@ const BusinessCanvas = (props) => {
   })
 
   const costs = props.info.canvas.costStructure.map(cost => {
-    return <p>{cost}</p>
+    return <span>{cost}</span>
   })
 
   const revenues = props.info.canvas.revenueStream.map(revenue => {
-    return <p>{revenue}</p>
+    return <span>{revenue}</span>
   })
+
+
 
   // html2canvas(target, {
   //   useCORS: true
@@ -63,23 +65,20 @@ const BusinessCanvas = (props) => {
         .catch(function (err) { console.log(err); });
   };
 
+
   return (
 
   <div className="container-fluid">
     <div id="canvas" className="row row-md-12">
       <div id="canvas_screen" className="col col-md-9">
           <div id="verticalHeader" className="row row-md-12 mb-4">
-            <div className="col-md-8">
-              <h1>The Business Model Canvas</h1>
-              <p>Created by: Taras Turchinskiy</p>
+            <div id="logo" className="col-md-8">
             </div>
 
             <div className="col-md-4 mt-auto">
               <div className="row">
-                  <div className="col-sm-6 col-md-3 m-2 mr-3"><input placeholder="Designer For:"/> </div>
-                  <div className="col-sm-6 col-md-3 m-2 mr-3"><input placeholder="By:" /></div>
-                  <div className="col-sm-6 col-md-3 m-2"><input placeholder="Date:" /></div>
-                </div>
+              <h2>The Business Model Canvas</h2>
+              </div>
             </div>
 
           </div>
@@ -93,7 +92,7 @@ const BusinessCanvas = (props) => {
                       {partners[3]}
               </div>
 
-              <div className="col-sm-3">
+              <div className="col-sm-2">
                 <div id="activRes" className="row mr-2 ml-2">
                   <div id="KA" className="col-12 mb-2" onClick={props.click}>
                   <h3> <span id ="keyActivities">Key Activities</span> </h3>
@@ -108,13 +107,17 @@ const BusinessCanvas = (props) => {
                 </div>
               </div>
 
-              <div id="VP" className="col-sm-2" onClick={props.click}>
+              <div id="VP" className="col-sm-3" onClick={props.click}>
                 <h3> <span id="valueProposition">Value Proposition</span> </h3>
                 <hr/>
-                <p> <font color="tomato">{values[0]}</font></p>
-                <p> <font color="navy">{values[1]}</font></p>
-                <p> <font color="darkgreen">{values[2]}</font></p>
-                <p> <font color="darkcyan>">{values[3]}</font></p>
+                <h6><font color="navy">{values[0]}</font></h6>
+                <p> {values[1]}</p>
+                <h6><font color="darkgreen">{values[2]}</font></h6>
+                <p> {values[3]}</p>
+                <h6> <font color="tomato">{values[4]}</font></h6>
+                <p> {values[5]}</p>
+                <h6> <font color="darkcyan">{values[6]}</font></h6>
+                <p> {values[7]}</p>
               </div>
 
               <div className="col-sm-3">
@@ -122,18 +125,20 @@ const BusinessCanvas = (props) => {
                   <div id="CH" className="col-12 mb-2" onClick={props.click}>
                     <h3> <span id="channels">Channels</span> </h3>
                     <hr/>
-                    <p> <font color="darkcyan">{channels[1]}</font> </p>
-                    <p> <font color="navy">{channels[3]}</font> </p>
+                    <h6> <font color="darkcyan">{channels[0]}</font></h6>
+                    <p>{channels[1]}</p>
+                    <h6> <font color="tomato">{channels[2]}</font></h6>
+                    <p>{channels[3]}</p>
 
                   </div>
-                  <div id ="CR" className="col-12" onClick={props.click}>
+                  <div id ="CR" className="col col-12" onClick={props.click}>
                     <h3> <span id ="customerRel">Customer Relationships</span> </h3>
                     <hr/>
                     <div className="box">
-                    <p><font color="darkcyan">{cusRels[0]} </font>{cusRels[1]}{cusRels[2]}</p>
-                    <p><font color="tomato">{cusRels[3]} </font>{cusRels[4]}{cusRels[5]}</p>
-                    <p><font color="navy">{cusRels[6]} </font>{cusRels[7]}{cusRels[8]}</p>
-                    <p><font color="darkblue">{cusRels[9]} </font>{cusRels[10]}{cusRels[11]}{cusRels[12]}</p>
+                    <p><font size="2" face="arial" color="darkcyan">{cusRels[1]} </font>{cusRels[2]}{cusRels[3]}</p>
+                    <p><font size="2" face="arial" color="tomato">{cusRels[5]} </font>{cusRels[6]}{cusRels[7]}</p>
+                    <p><font size="2" face="arial" color="navy">{cusRels[9]} </font>{cusRels[10]}{cusRels[11]}</p>
+                    <p><font size="2" face="arial" color="darkgreen">{cusRels[13]} </font>{cusRels[14]}</p>
                     </div>
                 </div>
               </div>
@@ -142,20 +147,35 @@ const BusinessCanvas = (props) => {
             <div id="CS" className="col col-sm-2" onClick={props.click}>
               <h3> <span id="customerSeg">Customer Segments</span> </h3>
               <hr/>
-              {cusSegs}
+              <h6> <font color="darkcyan">{cusSegs[1]}</font></h6>
+              <h6> <font color="tomato">{cusSegs[4]}</font></h6>
+              <h6> <font color="darkcyan">{cusSegs[6]}</font></h6>
+              {cusSegs[7]}
+              <h6> <font color="tomato">{cusSegs[8]}</font></h6>
+              {cusSegs[9]}
+              <h6> <font color="darkcyan">{cusSegs[10]}</font></h6>
+              {cusSegs[11]}
               </div>
           </div>
 
           <div id="verticalSecond" className="row row-md-12 ml-5 mr-5">
             <div id="CoS" className="col col mr-2" onClick={props.click}>
               <h3> <span id="costStructure">Cost structure</span> </h3>
-              <hr/>
-              {costs}
+              <hr/> 
+              <div className="box">
+              <p><font size="2" face="arial" color="darkcyan"> {costs[1]} </font>{costs[2]}</p>
+              <p><font size="2" face="arial" color="tomato">{costs[5]} </font>{costs[6]}{costs[7]}</p>
+              <p><font size="2" face="arial" color="navy">{costs[9]} </font>{costs[10]}{costs[11]}</p>
+              <p><font size="2" face="arial" color="darkgreen">{costs[13]} </font>{costs[14]}</p>
+              </div>
             </div>
             <div id="RS" className="col col" onClick={props.click}>
               <h3> <span id="revenueStream">Revenue stream</span> </h3>
               <hr/>
-              {revenues}
+              <h6> <font color="darkcyan">{revenues[0]}</font></h6>
+              <p>{revenues[1]}</p>
+              <h6> <font color="tomato">{revenues[2]}</font></h6>
+              <p>{revenues[3]}</p>
             </div>
           </div>
       </div>
@@ -166,6 +186,7 @@ const BusinessCanvas = (props) => {
       form = {props} />
       </div>
     </div>
+
     <div id="verticalBottom" className="row row-md-12 mt-4 fixed-bottom justify-content-center">
 
             <div className="col col-auto text-center mr-4">
