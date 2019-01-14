@@ -16,8 +16,10 @@ border: 0;
 }
 
 h2, h4, h6 {
-	font-family: 'Permanent Marker', cursive;
+    font-family: 'Permanent Marker', cursive;
+    color: #161616
 }
+
 
 #pdfScreen {
     height: 100%;
@@ -35,7 +37,7 @@ h2, h4, h6 {
 h3 {
 	font-size: 24px;
 	font-family: 'Permanent Marker', cursive;
-  color: black;
+    color: black;
 }
 
 h5 {
@@ -58,12 +60,16 @@ body, html, .container-fluid, #canvas {
 }
 
 #verticalHeader {
+    background-image: url("./l2.bmp"); 
+    background-repeat: no-repeat;
+    background-size: contain;
     height: 10%;
     background-color: black;
+
 }
 
 #verticalFirst {
-    height: 45% !important;
+    height: 50% !important;
 }
 
 #verticalFirst p {
@@ -71,7 +77,7 @@ body, html, .container-fluid, #canvas {
 }
 
 #verticalSecond {
-    height: 25% !important;
+    height: 20% !important;
 }
 
 #verticalBottom {
@@ -148,13 +154,15 @@ background-position: center;
 color: white;
 }
 
+#logoBottom {
+position: relative;
+top: 90%;
+color: whitesmoke;
+}
+
 .download:hover, #keyPartners:hover, #keyActivities:hover, #keyResources:hover, #valueProposition:hover, #channels:hover, #customerRel:hover, #revenueStream:hover, #customerSeg:hover, #costStructure:hover {
     color: red;
     cursor: pointer;
-}
-
-#transaction, #longterm, #community, #personal {
-    border: 1px solid black;
 }
 
 #KP:hover, #KA:hover, #KR:hover, #VP:hover, #CH:hover, #CR:hover, #CS:hover, #CoS:hover, #RS:hover {
@@ -265,14 +273,33 @@ fieldset .row .form-check label {
     color: black;
 }
 
-button {
+.btn-add {
+    background-color: darkgreen;
+    border: none;
+    color: white;
+    height: 25%;
+    width: 35%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.removeField, .removeField_2, .removeField_3, .removeField_4, .removeFieldcs, .removeField_2cs, .removeField_3cs, .removeField_4cs  {
+    border: none;
+    background: none;
+    font-size: 14px;
+    color: crimson;
+    font-weight: bold;
+}
+
+
+/* button {
     color: white;
     background-color: red;
     border: 1px solid tomato;
     height: 15%;
     width: 6%;
     margin: 1px;
-}
+} */
 
 
 
