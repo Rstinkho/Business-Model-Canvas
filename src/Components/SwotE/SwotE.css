@@ -1,0 +1,20 @@
+#org, #op-o, #thr-t, #s-s, #so-s, #st-s, #w-w, #wo-s, #wt-s {
+background: #ffc;
+max-width: 31%;
+margin: 1%;
+box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+position: relative;
+transform: rotate(-2deg);
+}
+
+#op-o:hover, #thr-t:hover, #s-s:hover, #so-s:hover, #st-s:hover, #w-w:hover, #wo-s:hover, #wt-s:hover {
+z-index: 5;
+-webkit-transform: scale(1.15);
+-moz-transform: scale(1.15);
+transform: scale(1.15);  
+}
+
+#opportunity_O:hover, #threat_T:hover, #strength_S:hover, #so_strategy:hover, #st_strategy:hover, #weakness_W:hover, #wo_strategy:hover, #wt_strategy:hover {
+    color: red;
+    cursor: pointer;
+}

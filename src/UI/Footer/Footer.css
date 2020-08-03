@@ -1,0 +1,13 @@
+.page-footer {
+    background-color: #212529;
+    z-index: 1;
+}
+
+.footer a {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0,0,0, .2);
+
+}

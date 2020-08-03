@@ -1,0 +1,77 @@
+form {
+margin-top: 33%;
+display: block;
+}
+
+form p {
+font-size: 16px;
+color: darkblue;
+font-family: 'Permanent Marker';
+}
+
+form .input-box {
+position: relative;
+margin: 10px;
+margin-bottom: 18px;
+margin-top: 18px;
+}
+
+form .input-box input {
+width: 90%;
+font-size: 14px;
+border: none;
+border-bottom: 2px solid black;
+outline: none;
+background-color: yellow;
+}
+
+form .input-box input:focus {
+border-bottom: 3px solid red;
+}
+
+form input[type="submit"] {
+border: none;
+cursor: pointer;
+border: 1px solid black;
+background: black;
+color: white;
+font-size: 14px;
+font-weight: bold;
+transition: 0.5s;
+height: 30px;
+width: 35%;
+float: right;
+margin-right: 12%;
+}
+
+form input[type="text"]:disabled {
+background: black;
+font-size: 14px;
+color: white;
+}
+
+#inputForm {
+background-color: black;
+background-image: url("https://i.imgur.com/W8306ti.png");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.btn-add {
+background-color: darkgreen;
+border: none;
+color: white;
+height: 25%;
+width: 35%;
+font-size: 14px;
+font-weight: bold;
+}
+
+.removeField, .removeField_2, .removeField_3, .removeField_4, .removeFieldcs, .removeField_2cs, .removeField_3cs, .removeField_4cs  {
+border: none;
+background: none;
+font-size: 14px;
+color: crimson;
+font-weight: bold;
+}

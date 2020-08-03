@@ -1,0 +1,12 @@
+#verticalHeader {
+    background-image: url("./l2.bmp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 10%;
+    background-color: black;
+}
+
+li {
+color: seashell;
+font-size: 14px;
+}

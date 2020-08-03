@@ -1,0 +1,89 @@
+#KP:hover, #KA:hover, #KR:hover, #VP:hover, #CH:hover, #CR:hover, #CS:hover, #CoS:hover, #RS:hover {
+z-index:5;
+-webkit-transform: scale(1.15);
+-moz-transform: scale(1.15);
+transform: scale(1.15);
+}
+    
+#KP, #KA, #KR, #VP, #CH, #CR, #CS, #CoS, #RS {
+-moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+-webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+box-shadow:10px 10px 7px rgba(0,0,0,.7);
+position:relative;
+text-decoration:none;
+color:#000;
+background:#ffc;
+display:block;
+}
+    
+#KA, #CS, #KR {
+transform:rotate(2deg);
+-webkit-transform:rotate(2deg);
+-moz-transform:rotate(2deg);
+position:relative;
+}
+    
+#CoS, #VP, #CR {
+transform:rotate(-3deg);
+-webkit-transform:rotate(-3deg);
+-moz-transform:rotate(-3deg);
+position:relative;
+}
+    
+#RS, #KP, #CH {
+transform:rotate(-2deg);
+-webkit-transform:rotate(-2deg);
+-moz-transform:rotate(-2deg);
+position:relative;
+}
+
+hr {
+margin-top: -10px;
+border: 0;
+height: 2px;
+background-image: -webkit-linear-gradient(left, #f0f0f0, blue, #f0f0f0);
+background-image: -moz-linear-gradient(left, #f0f0f0, blue, #f0f0f0);
+background-image: -ms-linear-gradient(left, #f0f0f0, blue, #f0f0f0);
+background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+
+.P1, #oneSided, #twoSided {
+margin-top: -5px;
+}
+
+#canvas_screen {
+background-image: url("https://i.imgur.com/dNH2d6C.png");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+#canvas {
+position: fixed;
+height: 80%;
+width: 100%;
+top: 10%;
+bottom: 10%;
+z-index: -1;
+}
+
+#verticalFirst {
+height: 55% !important;
+margin-top: 5%;
+}
+
+#verticalFirst p {
+font-size: 12px;
+}
+
+#activRes {
+    height: 100%;
+}
+
+#verticalSecond {
+height: 25% !important;
+}
+
+.download:hover, #keyPartners:hover, #keyActivities:hover, #keyResources:hover, #valueProposition:hover, #channels:hover, #customerRel:hover, #revenueStream:hover, #customerSeg:hover, #costStructure:hover {
+color: blue;
+cursor: pointer;
+}

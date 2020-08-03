@@ -1,0 +1,20 @@
+#strength, #weakness, #opp, #threat {
+background: #ffc;
+max-width: 48%;
+margin: 1%;
+box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+position: relative;
+transform: rotate(-2deg)
+}
+
+#strength:hover, #weakness:hover, #opp:hover, #threat:hover {
+z-index: 5;
+-webkit-transform: scale(1.15);
+-moz-transform: scale(1.15);
+transform: scale(1.15);     
+}
+
+#strengths:hover, #weaknesses:hover, #opps:hover, #threats:hover {
+    color: red;
+    cursor: pointer;
+}
